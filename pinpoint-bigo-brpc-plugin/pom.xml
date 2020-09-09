@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>pinpoint-plugins</artifactId>
+        <groupId>com.navercorp.pinpoint</groupId>
+        <version>2.0.5-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.navercorp.pinpoint.plugin.bigo.brpc</groupId>
+    <artifactId>pinpoint-bigo-brpc-plugin</artifactId>
+
+    <name>pinpoint-bigo-brpc-plugin</name>
+
+    <properties>
+        <jdk.version>1.6</jdk.version>
+        <jdk.home>${env.JAVA_8_HOME}</jdk.home>
+        <brpc-java.version>3.0.2-SNAPSHOT</brpc-java.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.navercorp.pinpoint</groupId>
+                <artifactId>pinpoint-plugin-bom</artifactId>
+                <version>${project.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.navercorp.pinpoint</groupId>
+            <artifactId>pinpoint-bootstrap-core</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.baidu</groupId>
+            <artifactId>brpc-java</artifactId>
+            <version>${brpc-java.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+    </dependencies>
+
+</project>
